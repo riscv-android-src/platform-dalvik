@@ -42,6 +42,8 @@ static const char* kInstructionSet = "x86";
 static const char* kInstructionSet = "mips";
 #elif defined(__x86_64__)
 static const char* kInstructionSet = "x86_64";
+#elif defined(__riscv) && (__riscv_xlen == 64)
+static const char* kInstructionSet = "riscv64";
 #else
 #error Unsupported instruction set.
 #endif
